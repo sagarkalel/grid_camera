@@ -4,7 +4,28 @@
 [![likes](https://img.shields.io/pub/likes/grid_camera?logo=dart)](https://pub.dev/packages/grid_camera/score)
 [![popularity](https://img.shields.io/pub/popularity/grid_camera?logo=dart)](https://pub.dev/packages/grid_camera/score)
 
+grid_camera is a Flutter package that enhances the camera experience with a customizable grid overlay system. Built on top of the official camera plugin, it provides an easy-to-use widget for applications requiring precise photo composition, document scanning, or grid-based image capture.
+
 A Flutter camera package that provides a customizable grid overlay for precise photo composition. Features include adjustable grid rows/columns, aspect ratio control, built-in permission handling, and captured images with grid overlay. Perfect for applications requiring precise photo composition, document scanning, or grid-based image capture.
+
+### Key Features:
+
+- Customizable camera preview with adjustable grid overlay
+- Configurable grid rows, columns, and appearance
+- Flexible aspect ratio control
+- Built-in permission handling with customizable UI
+- Image capture with grid overlay
+- Utility extensions for quick widget styling
+- Responsive design and error handling
+- Easy integration with existing Flutter apps
+
+### Perfect for:
+
+- 📸 Document scanning apps
+- 📊 Technical photography
+- 📏 Measurement applications
+- 🎨 Design and composition tools
+- 📱 Any app requiring precise photo capture
 
 ## Features
 

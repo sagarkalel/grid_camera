@@ -3,6 +3,24 @@ description: A Flutter camera package with customizable grid overlay for precise
 version: 0.0.1
 homepage: https://github.com/sagarkalel/grid_camera
 repository: https://github.com/sagarkalel/grid_camera
+keywords:
+  - grid-camera
+  - grid
+  - photography
+  - flutter
+  - camera_plugin
+  - image_capture
+  - grid_overlay
+  - grid_camera_example
+  - grid_camera_flutter
+  - camera_flutter_example
+  - camera_flutter_grid_example
+  - grid_camera_flutter_example
+  - grid_camera_flutter_example_app
+  - grid flutter camera
+  - gap
+  - flutter-extensions
+  - extensions
 
 environment:
   sdk: ^3.5.0
