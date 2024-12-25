@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
@@ -14,7 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Grid Camera Demo',
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData.dark(),
       home: const HomePage(),
@@ -22,23 +20,79 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  Uint8List? imageInBytes;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Grid Camera Demo")),
-      body: GridCameraWidget(
-        onDonePressed: (Uint8List gridImage) {
-          // TODO: do something with captured gridImage, e.g Save/Download/Share
-          log(gridImage.toString());
-        },
-        rowCount: 10,
-        columnCount: 10,
-        gridWidth: 0.5,
-        aspectRatio: 1 / 1,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Grid Camera Demo",
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            const Gap(24),
+            Container(
+              height: MediaQuery.of(context).size.width * .8,
+              width: MediaQuery.of(context).size.width * .8,
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColorLight.withOpacity(0.5),
+                borderRadius: BorderRadius.circular(10),
+                image: imageInBytes == null
+                    ? null
+                    : DecorationImage(image: MemoryImage(imageInBytes!)),
+              ),
+              alignment: Alignment.center,
+              child: imageInBytes != null
+                  ? IconButton.outlined(
+                      onPressed: () {
+                        imageInBytes = null;
+                        setState(() {});
+                      },
+                      icon: const Icon(Icons.delete_forever, size: 48),
+                    )
+                  : IconButton.outlined(
+                      onPressed: () async {
+                        final img = await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CameraPage()),
+                        );
+                        if (img == null) return;
+                        imageInBytes = img;
+                        setState(() {});
+                      },
+                      icon: const Icon(Icons.upload, size: 48),
+                    ),
+            ),
+            const Gap(kToolbarHeight),
+          ],
+        ).padXXDefault,
       ),
+    );
+  }
+}
+
+class CameraPage extends StatelessWidget {
+  const CameraPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GridCameraWidget(
+      onDonePressed: (Uint8List img) => Navigator.pop(context, img),
+      rowCount: 10,
+      columnCount: 10,
+      gridWidth: 0.5,
+      aspectRatio: 1 / 1,
     );
   }
 }

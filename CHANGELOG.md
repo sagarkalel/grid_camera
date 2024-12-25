@@ -32,3 +32,11 @@ Initial release of grid_camera package.
 ## 0.0.4 & 0.0.5
 
 - Upgraded official [camera] package's version to the latest version.
+
+## 0.0.6
+
+- Downgrading official [camera] package's version to camera: ^0.10.6, and added comments for extensions, Gap widget, and added detailed example of how to use (grid_camera) package.
+
+## 0.0.7
+
+- Upgraded official [camera] package's version to latest version and updated Readme.md accordingly.
