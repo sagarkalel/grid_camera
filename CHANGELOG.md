@@ -19,3 +19,12 @@ Initial release of grid_camera package.
 - PermissionDeniedWidget - Customizable permission UI
 - Widget Extensions - Helpful padding and expansion utilities
 - Gap - Utility widget for spacing
+
+## 0.0.2
+
+- Updated Readme.md
+
+## 0.0.3
+
+- Updated Readme.md
+- Downgraded official [camera] package's version, because as per latest version of it, everyone has to upgrade gradle to latest version.

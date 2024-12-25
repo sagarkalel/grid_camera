@@ -37,6 +37,9 @@ A Flutter camera package that provides a customizable grid overlay for precise p
 - 🔄 Image capture with grid overlay
 - ⚡ Utility extensions for quick widget styling
 - 🎯 Gap widget for consistent spacing
+- 📱 **Platform Support**:
+  - ✅ Android
+  - ✅ iOS
 
 ## Getting Started
 
@@ -69,7 +72,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  grid_camera: ^0.0.1
+  grid_camera: ^0.0.3
 ```
 
 ## Usage

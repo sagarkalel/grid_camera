@@ -1,6 +1,6 @@
 name: grid_camera
 description: A Flutter camera package with customizable grid overlay for precise photo composition and image capture.
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/sagarkalel/grid_camera
 repository: https://github.com/sagarkalel/grid_camera
 keywords:
@@ -27,9 +27,9 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  camera: ^0.11.0+2
   flutter:
     sdk: flutter
+  camera: ^0.10.6
   permission_handler: ^11.3.1
   screenshot: ^3.0.0
 
