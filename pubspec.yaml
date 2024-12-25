@@ -29,7 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  camera: ^0.10.6
+  camera: ^0.11.0+2
   permission_handler: ^11.3.1
   screenshot: ^3.0.0
 
