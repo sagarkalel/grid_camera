@@ -4,6 +4,7 @@ import 'dart:typed_data';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:grid_camera/src/permission_denied_widget.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:screenshot/screenshot.dart';
 
@@ -253,12 +254,14 @@ class _GridCameraWidgetState extends State<GridCameraWidget>
     if (!_isInitialized ||
         _controller == null ||
         !_controller!.value.isInitialized) {
-      return Center(
-        child: !_isCameraPermissionGranted
-            ? widget.permissionDeniedWidget ??
-                const Text('Camera permission denied')
-            : widget.cameraLoadingWidget ??
-                const CircularProgressIndicator.adaptive(),
+      return Scaffold(
+        body: Center(
+          child: !_isCameraPermissionGranted
+              ? widget.permissionDeniedWidget ??
+                  PermissionDeniedWidget(_requestCameraPermission)
+              : widget.cameraLoadingWidget ??
+                  const CircularProgressIndicator.adaptive(),
+        ),
       );
     }
 

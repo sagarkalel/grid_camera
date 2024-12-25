@@ -72,7 +72,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  grid_camera: ^0.0.7
+  grid_camera: ^0.1.0
 ```
 
 ## Usage
@@ -289,7 +289,7 @@ Common issues and their solutions:
 1. **Camera not initializing**: Ensure you've added all required permissions and followed the camera plugin setup.
 2. **Black screen**: Check if the camera permission is granted at runtime.
 3. **Grid not visible**: Verify that the gridColor contrasts with your camera preview.
-4. **gradle error**: To overcome this problem, you'll need to upgrade gradle version to latest version OR uou can use "grid_camera" package's old version (e.g grid_camera: ^0.0.3 or grid_camera: ^0.0.6).
+4. **gradle error**: To overcome this problem, you'll need to upgrade gradle version to latest version OR uou can use "grid_camera" package's old version (e.g grid_camera: ^0.0.8).
 
 For more specific camera-related issues, please refer to the [camera plugin's troubleshooting guide](https://pub.dev/packages/camera#troubleshooting).
 

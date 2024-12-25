@@ -33,10 +33,17 @@ Initial release of grid_camera package.
 
 - Upgraded official [camera] package's version to the latest version.
 
-## 0.0.6
+## 0.0.6 && 0.0.8
 
+- Some correction in GridCameraWidget permission denied widget.
 - Downgrading official [camera] package's version to camera: ^0.10.6, and added comments for extensions, Gap widget, and added detailed example of how to use (grid_camera) package.
 
 ## 0.0.7
 
+- Some correction in GridCameraWidget permission denied widget.
+- Upgraded official [camera] package's version to latest version and updated Readme.md accordingly.
+
+## 0.1.0
+
+- Some correction in GridCameraWidget permission denied widget.
 - Upgraded official [camera] package's version to latest version and updated Readme.md accordingly.
