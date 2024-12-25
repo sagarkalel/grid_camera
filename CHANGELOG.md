@@ -28,3 +28,7 @@ Initial release of grid_camera package.
 
 - Updated Readme.md
 - Downgraded official [camera] package's version, because as per latest version of it, everyone has to upgrade gradle to latest version.
+
+## 0.0.4
+
+- Upgraded official [camera] package's version to the latest version.

@@ -72,7 +72,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  grid_camera: ^0.0.3
+  grid_camera: ^0.0.4
 ```
 
 ## Usage
